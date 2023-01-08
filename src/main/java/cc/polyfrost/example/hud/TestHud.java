@@ -1,16 +1,19 @@
 package cc.polyfrost.example.hud;
 
 import cc.polyfrost.oneconfig.hud.SingleTextHud;
-import net.minecraft.client.Minecraft;
 
+/**
+ * An example OneConfig HUD that is started in the config and displays text.
+ *
+ * @see cc.polyfrost.example.config.TestConfig#hud
+ */
 public class TestHud extends SingleTextHud {
-
     public TestHud() {
-        super("Title", true);
+        super("Test", true);
     }
 
     @Override
-    protected String getText(boolean example) {
-        return Minecraft.getMinecraft().getSession().getUsername();
+    public String getText(boolean example) {
+        return "I'm an example HUD";
     }
 }

@@ -3,11 +3,10 @@ pluginManagement {
         gradlePluginPortal()
         mavenCentral()
         maven("https://repo.polyfrost.cc/releases")
-        maven("https://maven.architectury.dev/")
     }
     plugins {
-        val egtVersion = "0.1.11"
-        id("gg.essential.multi-version.root") version egtVersion
+        val pgtVersion = "0.1.23"
+        id("cc.polyfrost.multi-version.root") version pgtVersion
     }
     resolutionStrategy {
         eachPlugin {

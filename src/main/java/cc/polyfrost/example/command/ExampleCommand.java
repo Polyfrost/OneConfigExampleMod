@@ -6,9 +6,8 @@ import cc.polyfrost.oneconfig.utils.commands.annotations.Main;
 
 @Command(value = ExampleMod.MODID, description = "Access the " + ExampleMod.NAME + " GUI.")
 public class ExampleCommand {
-
     @Main
-    private static void main() {
+    private void handle() {
         ExampleMod.INSTANCE.config.openGui();
     }
 }
