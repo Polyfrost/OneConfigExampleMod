@@ -37,7 +37,7 @@ loom {
     noServerRunConfigs()
     if (project.platform.isLegacyForge) {
         launchConfigs.named("client") {
-            arg("--tweakClass", "cc.polyfrost.oneconfigwrapper.OneConfigWrapper")
+            arg("--tweakClass", "cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker")
             property("mixin.debug.export", "true")
         }
     }
@@ -64,11 +64,11 @@ repositories {
 }
 
 dependencies {
-    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.1.0-alpha+")
+    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.2.0-alpha+")
 
     if (platform.isLegacyForge) {
         compileOnly("org.spongepowered:mixin:0.7.11-SNAPSHOT")
-        shade("cc.polyfrost:oneconfig-wrapper-launchwrapper:1.0.0-alpha+")
+        shade("cc.polyfrost:oneconfig-wrapper-launchwrapper:1.0.0-beta+")
     }
 }
 
@@ -141,7 +141,7 @@ tasks {
                     "ForceLoadAsMod" to true,
                     "TweakOrder" to "0",
                     "MixinConfigs" to "mixin.${mod_id}.json",
-                    "TweakClass" to "cc.polyfrost.oneconfigwrapper.OneConfigWrapper"
+                    "TweakClass" to "cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker"
                 )
             )
         }
