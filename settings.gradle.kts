@@ -1,3 +1,5 @@
+@file:Suppress("PropertyName")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -5,7 +7,7 @@ pluginManagement {
         maven("https://repo.polyfrost.cc/releases") // Adds the Polyfrost maven repository to get Polyfrost Gradle Toolkit
     }
     plugins {
-        val pgtVersion = "0.1.27" // Sets the default versions for Polyfrost Gradle Toolkit
+        val pgtVersion = "0.1.28" // Sets the default versions for Polyfrost Gradle Toolkit
         id("cc.polyfrost.multi-version.root") version pgtVersion
     }
 }
