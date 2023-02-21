@@ -1,3 +1,5 @@
+@file:Suppress("PropertyName")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
