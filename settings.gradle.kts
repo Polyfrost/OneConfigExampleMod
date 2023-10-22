@@ -4,11 +4,11 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         mavenCentral()
-        maven("https://repo.polyfrost.cc/releases") // Adds the Polyfrost maven repository to get Polyfrost Gradle Toolkit
+        maven("https://repo.polyfrost.org/releases") // Adds the Polyfrost maven repository to get Polyfrost Gradle Toolkit
     }
     plugins {
-        val pgtVersion = "0.1.28" // Sets the default versions for Polyfrost Gradle Toolkit
-        id("cc.polyfrost.multi-version.root") version pgtVersion
+        val pgtVersion = "0.2.9" // Sets the default versions for Polyfrost Gradle Toolkit
+        id("org.polyfrost.multi-version.root") version pgtVersion
     }
 }
 

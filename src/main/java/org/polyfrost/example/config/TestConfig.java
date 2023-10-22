@@ -1,7 +1,7 @@
-package cc.polyfrost.example.config;
+package org.polyfrost.example.config;
 
-import cc.polyfrost.example.ExampleMod;
-import cc.polyfrost.example.hud.TestHud;
+import org.polyfrost.example.ExampleMod;
+import org.polyfrost.example.hud.TestHud;
 import cc.polyfrost.oneconfig.config.Config;
 import cc.polyfrost.oneconfig.config.annotations.Dropdown;
 import cc.polyfrost.oneconfig.config.annotations.HUD;

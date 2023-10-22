@@ -1,6 +1,6 @@
-package cc.polyfrost.example.command;
+package org.polyfrost.example.command;
 
-import cc.polyfrost.example.ExampleMod;
+import org.polyfrost.example.ExampleMod;
 import cc.polyfrost.oneconfig.utils.commands.annotations.Command;
 import cc.polyfrost.oneconfig.utils.commands.annotations.Main;
 

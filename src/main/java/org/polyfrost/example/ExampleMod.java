@@ -1,7 +1,7 @@
-package cc.polyfrost.example;
+package org.polyfrost.example;
 
-import cc.polyfrost.example.command.ExampleCommand;
-import cc.polyfrost.example.config.TestConfig;
+import org.polyfrost.example.command.ExampleCommand;
+import org.polyfrost.example.config.TestConfig;
 import cc.polyfrost.oneconfig.events.event.InitializationEvent;
 import net.minecraftforge.fml.common.Mod;
 import cc.polyfrost.oneconfig.utils.commands.CommandManager;

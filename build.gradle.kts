@@ -1,18 +1,18 @@
 @file:Suppress("UnstableApiUsage", "PropertyName")
 
-import cc.polyfrost.gradle.util.noServerRunConfigs
+import org.polyfrost.gradle.util.noServerRunConfigs
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 // Adds support for kotlin, and adds the Polyfrost Gradle Toolkit
 // which we use to prepare the environment.
 plugins {
     kotlin("jvm")
-    id("cc.polyfrost.multi-version")
-    id("cc.polyfrost.defaults.repo")
-    id("cc.polyfrost.defaults.java")
-    id("cc.polyfrost.defaults.loom")
+    id("org.polyfrost.multi-version")
+    id("org.polyfrost.defaults.repo")
+    id("org.polyfrost.defaults.java")
+    id("org.polyfrost.defaults.loom")
     id("com.github.johnrengelman.shadow")
-    id("net.kyori.blossom") version "1.3.0"
+    id("net.kyori.blossom") version "1.3.1"
     id("signing")
     java
 }
@@ -38,7 +38,7 @@ blossom {
 version = mod_version
 // Sets the group, make sure to change this to your own. It can be a website you own backwards or your GitHub username.
 // e.g. com.github.<your username> or com.<your domain>
-group = "cc.polyfrost"
+group = "org.polyfrost"
 
 // Sets the name of the output jar (the one you put in your mods folder and send to other people)
 // It outputs all versions of the mod into the `build` directory.
@@ -52,16 +52,13 @@ loom {
     // If you're developing a server-side mod, you can remove this line.
     noServerRunConfigs()
 
-    // Adds the tweak class if we are building legacy version of forge as per the documentation (https://docs.polyfrost.cc)
+    // Adds the tweak class if we are building legacy version of forge as per the documentation (https://docs.polyfrost.org)
     if (project.platform.isLegacyForge) {
-        launchConfigs.named("client") {
-            arg("--tweakClass", "cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker")
-
-            // This is enabled so OneConfig can read our Mixins and automatically apply them.
-            property(
-                "mixin.debug.export",
-                "true"
-            )
+        runConfigs {
+            "client" {
+                programArgs("--tweakClass", "cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker")
+                property("mixin.debug.export", "true")
+            }
         }
     }
     // Configures the mixins if we are building for forge, useful for when we are dealing with cross-platform projects.
@@ -88,13 +85,15 @@ sourceSets {
 
 // Adds the Polyfrost maven repository so that we can get the libraries necessary to develop the mod.
 repositories {
-    maven("https://repo.polyfrost.cc/releases")
+    maven("https://repo.polyfrost.org/releases")
 }
 
 // Configures the libraries/dependencies for your mod.
 dependencies {
     // Adds the OneConfig library, so we can develop with it.
-    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.2.0-alpha+")
+    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.2.1-alpha+")
+
+    modRuntimeOnly("me.djtheredstoner:DevAuth-${if (platform.isFabric) "fabric" else if (platform.isLegacyForge) "forge-legacy" else "forge-latest"}:1.1.2")
 
     // If we are building for legacy forge, includes the launch wrapper with `shade` as we configured earlier.
     if (platform.isLegacyForge) {
@@ -172,7 +171,7 @@ tasks {
     }
 
     remapJar {
-        input.set(shadowJar.get().archiveFile)
+        inputFile.set(shadowJar.get().archiveFile)
         archiveClassifier.set("")
     }
 
