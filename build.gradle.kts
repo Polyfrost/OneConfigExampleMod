@@ -21,6 +21,7 @@ plugins {
 val mod_name: String by project
 val mod_version: String by project
 val mod_id: String by project
+val mod_archives_name: String by project
 
 // Sets up the variables for when we preprocess to other Minecraft versions.
 preprocess {
@@ -43,7 +44,7 @@ group = "org.polyfrost"
 // Sets the name of the output jar (the one you put in your mods folder and send to other people)
 // It outputs all versions of the mod into the `build` directory.
 base {
-    archivesName.set("$mod_id-$platform")
+    archivesName.set("$mod_archives_name-$platform")
 }
 
 // Configures the Polyfrost Loom, our plugin fork to easily set up the programming environment.
