@@ -76,6 +76,9 @@ loom {
 val shade: Configuration by configurations.creating {
     configurations.implementation.get().extendsFrom(this)
 }
+val modShade: Configuration by configurations.creating {
+    configurations.modImplementation.get().extendsFrom(this)
+}
 
 // Configures the output directory for when building from the `src/resources` directory.
 sourceSets {
@@ -167,7 +170,7 @@ tasks {
     // include some dependencies within our mod jar file.
     named<ShadowJar>("shadowJar") {
         archiveClassifier.set("dev") // TODO: machete gets confused by the `dev` prefix.
-        configurations = listOf(shade)
+        configurations = listOf(shade, modShade)
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     }
 
