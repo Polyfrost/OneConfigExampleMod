@@ -1,9 +1,9 @@
 # OneConfigExampleMod
 
-![Powered by OneConfig](https://polyfrost.org/img/cozy_vector.svg)
-![Compact Powered by OneConfig](https://polyfrost.org/img/compact_vector.svg)
-![Minimal Powered by OneConfig](https://polyfrost.org/img/cozy-minimal_vector.svg)
-![Minimal Compact Powered by OneConfig](https://polyfrost.org/img/compact-minimal_vector.svg)
+![Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_1.svg)
+![Compact Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_2.svg)
+![Minimal Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_3.svg)
+![Minimal Compact Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_4.svg)
 
 Example mod implementing OneConfig.
 
