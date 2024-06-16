@@ -14,3 +14,8 @@ Example mod implementing OneConfig.
 - Refactor the template (specifically, the modid, version and name in the gradle.properties and most of the class names)
   to a different name.
 - Have fun modding! :D
+
+## Need to update to a newer commit of this template?
+
+Check out these update guides:
+- [Updating to commit `301a6ca`](update-to-301a6ca.md) (most recent update)
