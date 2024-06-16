@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * An example mixin using SpongePowered's Mixin library and ObjectWeb ASM.
+ * An example mixin using SpongePowered's Mixin library
  *
  * @see Inject
  * @see Mixin
