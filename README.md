@@ -18,5 +18,5 @@ Example mod implementing OneConfig.
 ## Need to update to a newer commit of this template?
 
 Check out these update guides:
-- [Updating to commit `0685aee`](update-to-0685aee.md) (most recent update)
+- [Updating to commit `fd8e095`](update-to-fd8e095.md) (most recent update)
 - [Updating to commit `301a6ca`](update-to-301a6ca.md)

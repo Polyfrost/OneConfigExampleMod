@@ -1,4 +1,4 @@
-# Updating to commit [`0685aee`](https://github.com/Polyfrost/OneConfigExampleMod/commit/0685aee63b98910b151ed1006564a5cfbdd3deff)
+# Updating to commit [`fd8e095`](https://github.com/Polyfrost/OneConfigExampleMod/commit/fd8e095b2964eb0264c59d573ee3b0ca0855847f)
 
 If you don't care to check the commit and manually apply everything, here are all the changes we made in that commit:
 
@@ -18,4 +18,4 @@ Fixes the mixin json refmap not reflecting the mod id that is set in `gradle.pro
 
 <img width="1444" alt="Screenshot 2024-07-06 at 9 31 14 PM" src="https://github.com/Polyfrost/OneConfigExampleMod/assets/45589059/8ae60c6a-c601-4091-9885-86942891959a">
 
-Updates PGT and Loom to 0.6.4
+Updates PGT and Loom to 0.6.5
