@@ -16,6 +16,6 @@ Fixes the mixin json refmap not reflecting the mod id that is set in `gradle.pro
 
 ## settings.gradle.kts
 
-<img width="1444" alt="Screenshot 2024-07-06 at 9 31 14 PM" src="https://github.com/Polyfrost/OneConfigExampleMod/assets/45589059/8ae60c6a-c601-4091-9885-86942891959a">
+<img width="1451" alt="Screenshot 2024-07-14 at 8 30 40 PM" src="https://github.com/user-attachments/assets/483aa3fd-d9e8-4172-8080-c5d1f573f315">
 
 Updates PGT and Loom to 0.6.5
